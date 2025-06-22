@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ['undici'],
+  experimental: {
+    serverComponentsExternalPackages: ['undici'],
+  },
 };
 
 module.exports = nextConfig; 
