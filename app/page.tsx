@@ -1,11 +1,11 @@
 'use client';
 
-import { useAuth } from './context/AuthContext';
+import { useAuth } from '@/context/AuthContext';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useCallback } from 'react';
 import { collection, query, where, onSnapshot, DocumentData, QueryDocumentSnapshot } from 'firebase/firestore';
-import { db, auth } from './lib/firebase';
-import AddBudgetModal from './components/AddBudgetModal';
+import { db, auth } from '@/lib/firebase';
+import AddBudgetModal from '@/components/AddBudgetModal';
 import { Budget } from '@/types/index';
 
 export default function HomePage() {
